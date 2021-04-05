@@ -1,0 +1,15 @@
+
+****CREATE TABLE DATABASE*****
+CREATE_TABLE_customer(
+Customer_Id VARCHAR(20)CONSTRAINT Pk_Customer PRIMARY KEY,Customer_name VARCHAR(20) NO NULL ,Customer_TEL_Number);
+
+CREATE_TABLE_Product(
+Product_Id VARCHAR(20)CONSTRAINT Pk_Product PRIMARY KEY,Product_name VARCHAR(20) NO NULL ,Price_Number CHECK(>20));
+
+CREATE_TABLE Orders(CONSTRAINT Fk_Orders FOREIGN KEY customer_Id REFERENCES CuSTOMER (customer Id),
+CONSTRAINT Fk_Orders FOREIGN KEY product_Id REFERENCES CuSTOMER (product_Id),
+amount number,quantity number);
+
+****SQL*****
+ALTER TABLE Product  ADD Category VARCHAR(100)
+ALTER TABLE Orders ADD OrderDate DATE_DEFAULT.
